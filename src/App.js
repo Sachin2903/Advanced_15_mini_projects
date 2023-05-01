@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import { Button } from './components/Atoms/buttons/buttons';
+import { Input } from './components/Atoms/input/input';
 import './App.css';
-
+import { useRef } from 'react';
 function App() {
+  const inputRef=useRef();
+
+  function funchange(){
+    inputRef.current.type="file";
+    inputRef.current.click();
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="betweendiv">
+      <h1>Pick the file By Sachin Chaturvedi</h1>
+       <span>
+       <Input reftype={inputRef} stylee="inputstylee" hints="press to change th type ==> "/>
+       <Button name="Pick the file" classnam="buttonstylee" clickfun={funchange}/>    
+       </span>
     </div>
   );
 }

@@ -1,38 +1,50 @@
-.App {
+.buttonstylee{
+  background-color: rgb(183, 255, 0);
+  font-weight: bold;
+  height:5rem;
+  width:15rem;
+  font-size:1.7rem;
+  cursor: pointer;
+  border-radius: 25%;
+  margin-left:4rem;
+  box-shadow: 0rem 0.5rem 0.6rem black;
+  border:0px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+
+}
+
+.inputstylee{
   text-align: center;
+  box-shadow: 0rem 0.5rem 0.3rem black;
+  background-color: rgb(255, 255, 255);
+  height:2rem;
+  width: 18rem;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.betweendiv{
+background-color: darkorange;
+height: 35rem;
+width:55rem;
+position:absolute;
+top:25%;
+left:28%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+box-shadow: 0.8rem 0.8rem 0.8rem grey;
+background-image: linear-gradient(339deg,#ffffff 50%,transparent 50%);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1{
+  font-size: 3rem;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1::selection{
+  color: #ffffff;
+  background-color: black;
+  font-weight: bold;
+  
+  
 }
