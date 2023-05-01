@@ -1,21 +1,36 @@
 import { Button } from './components/Atoms/buttons/buttons';
-import { Input } from './components/Atoms/input/input';
-import './App.css';
-import { useRef } from 'react';
-function App() {
-  const inputRef=useRef();
+import Image from "./components/Atoms/image/image";
+import logo1 from "./././img1.jpeg"
+import logo2 from "./././img2.jpg"
+import logo3 from "./././img3.jpg"
+import logo4 from "./././img4.jpg"
 
-  function funchange(){
-    inputRef.current.type="file";
-    inputRef.current.click();
+import './App.css';
+import { useEffect, useRef } from 'react';
+function App() {
+  const arr = [logo1, logo2, logo3, logo4];
+  const imgRef = useRef(null);
+  const countIndex = useRef(0);
+
+  useEffect(() => {
+    imgRef.current.src = arr[countIndex.current];
+  }, [])
+
+  function funchange() {
+    countIndex.current = countIndex.current + 1;
+    if (countIndex.current === arr.length) {
+      countIndex.current = 0;
+    }
+    imgRef.current.src = arr[countIndex.current];
   }
+
   return (
     <div className="betweendiv">
-      <h1>Pick the file By Sachin Chaturvedi</h1>
-       <span>
-       <Input reftype={inputRef} stylee="inputstylee" hints="press to change th type ==> "/>
-       <Button name="Pick the file" classnam="buttonstylee" clickfun={funchange}/>    
-       </span>
+      
+      <Image  imgdata="changeimg" imageref={imgRef}  imgclassnam="img"/>
+
+      <Button name="Change Picture" classnam="buttonstylee" clickfun={funchange} />
+
     </div>
   );
 }

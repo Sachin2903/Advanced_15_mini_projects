@@ -1,50 +1,30 @@
 .buttonstylee{
   background-color: rgb(183, 255, 0);
-  font-weight: bold;
   height:5rem;
   width:15rem;
-  font-size:1.7rem;
+  font-size:1.7em;
   cursor: pointer;
   border-radius: 25%;
   margin-left:4rem;
   box-shadow: 0rem 0.5rem 0.6rem black;
   border:0px;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  
-
 }
 
-.inputstylee{
-  text-align: center;
-  box-shadow: 0rem 0.5rem 0.3rem black;
-  background-color: rgb(255, 255, 255);
-  height:2rem;
-  width: 18rem;
-  
-}
+
 
 .betweendiv{
 background-color: darkorange;
-height: 35rem;
-width:55rem;
-position:absolute;
-top:25%;
-left:28%;
+height:100vh;
+width:100vw;
 display: flex;
-flex-direction: column;
 justify-content: center;
 align-items: center;
-box-shadow: 0.8rem 0.8rem 0.8rem grey;
 background-image: linear-gradient(339deg,#ffffff 50%,transparent 50%);
 }
-h1{
-  font-size: 3rem;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-h1::selection{
-  color: #ffffff;
-  background-color: black;
-  font-weight: bold;
-  
-  
+
+.img{
+  border:0.5em dashed black;
+  box-shadow:0.9rem 0.8rem 1rem black; 
+  height:50em;
+   width:50em;
 }
