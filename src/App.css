@@ -1,30 +1,9 @@
-.buttonstylee{
-  background-color: rgb(183, 255, 0);
-  height:5rem;
-  width:15rem;
-  font-size:1.7em;
-  cursor: pointer;
-  border-radius: 25%;
-  margin-left:4rem;
-  box-shadow: 0rem 0.5rem 0.6rem black;
-  border:0px;
-}
 
-
-
-.betweendiv{
-background-color: darkorange;
-height:100vh;
-width:100vw;
-display: flex;
-justify-content: center;
-align-items: center;
-background-image: linear-gradient(339deg,#ffffff 50%,transparent 50%);
-}
 
 .img{
-  border:0.5em dashed black;
-  box-shadow:0.9rem 0.8rem 1rem black; 
-  height:50em;
-   width:50em;
+  border:0px;
+  
+  height:90vh;
+   width:90vw;
+   
 }
