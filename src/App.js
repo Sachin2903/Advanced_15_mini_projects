@@ -1,4 +1,5 @@
 import "./App.css";
+import axios from "axios";
 import { useRef } from "react";
 import Input from "./component/atoms/input/input";
 import { Button } from "./component/atoms/button/button";
@@ -6,27 +7,22 @@ import { Button } from "./component/atoms/button/button";
 function App() {
   const input = useRef("");
 
-  function sendOtp(finalNumber) {
-    fetch("https://cdn-api.co-vin.in/api/v2/auth/public/generateOTP", {
-      method: "POST",
-      headers: {
-        "content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        mobile: finalNumber,
-      }),
-    })
-      .then((res) => {
-        if (res.status === 200)
-          alert("Success, Soon You Will Receive a OTP on Your Mobile-Number");
-        else {
-          alert("Wait For 4min To Generate New OTP");
+  async function sendOtp(finalNumber) {
+    try {
+      const resp = await axios.post(
+        "https://cdn-api.co-vin.in/api/v2/auth/public/generateOTP",
+        {
+          mobile: finalNumber,
         }
-        input.current.value = "";
-      })
-      .catch((err) => {
-        alert("Try after some time website is on mentainence");
-      });
+      );
+
+      
+        alert("Success, Soon You Will Receive a OTP on Your Mobile-Number");
+
+      input.current.value = "";
+    } catch {
+      alert("Wait For 4min To Generate New OTP");
+    }
   }
 
   function checkNumber() {
