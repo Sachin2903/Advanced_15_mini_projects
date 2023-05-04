@@ -1,32 +1,20 @@
-
 import Image from "./components/Atoms/image/image";
-import './App.css';
-import React,{ useEffect, useState } from 'react';
+import "./App.css";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 function App() {
-  
- const [imagesrc,setimagesrc]=useState('');
+  const [imagesrc, setimagesrc] = useState("");
 
-  
- async function ingfun(){
-  const responce=await fetch("https://dog.ceo/api/breeds/image/random");
-  const resobj= await responce.json();
-  setimagesrc(resobj.message);
-}
-  
-  useEffect(()=>{ingfun()},[])
- 
+  async function ingfun() {
+    const responce = await axios.get("https://dog.ceo/api/breeds/image/random");
+    setimagesrc(responce.data.message);
+  }
 
- 
-  return (
-    
-      
-      
-     
- <Image imgdata="Loading..." imagesrc={imagesrc} imgclassnam="img"/>
-      
+  useEffect(() => {
+    ingfun();
+  }, []);
 
-    
-  )
+  return <Image imgdata="Loading..." imagesrc={imagesrc} imgclassnam="img" />;
 }
 
 export default App;
