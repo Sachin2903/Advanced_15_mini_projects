@@ -1,0 +1,92 @@
+.navbar {
+  width: 100%;
+  height: 78px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(150, 171, 255);
+}
+
+.navbarMobile {
+  width: 25vw;
+  height: 55vh;
+  top: 78px;
+  box-shadow: 0.1rem 0.3rem 0.5rem rgb(255, 255, 255);
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+  text-decoration: underline;
+  background-color: rgb(42, 209, 255);
+}
+
+.navlist {
+  margin-right: 4vw;
+  height: 100%;
+  width: 60%;
+  float: right;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navlogo {
+  cursor: none;
+  height: 100%;
+  width: 8%;
+  float: left;
+  margin-left: 6%;
+}
+
+.navbar li a {
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.navbar li button {
+  box-shadow: 0.3rem 0.3rem 0.2rem whitesmoke;
+  cursor: pointer;
+  border: 0;
+  border-radius: 20%;
+  height: 2.5rem;
+  font-weight: 900;
+  width: 5rem;
+  background-color: rgb(207, 95, 255);
+}
+
+.navbar li a:hover {
+  background-color: black;
+  color: white;
+}
+
+.burger {
+  position: relative;
+
+  display: none;
+  float: right;
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+  height: 100%;
+  font-size: 2rem;
+  width: 2.9rem;
+}
+
+.navbarMobile li a {
+  font-size: 0.8em;
+}
+
+@media screen and (width<=1140px) {
+  .navlist {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+}
