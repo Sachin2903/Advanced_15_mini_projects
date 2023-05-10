@@ -1,0 +1,25 @@
+.scroll {
+  /* width: 900px;
+  height: 270px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow-x:scroll;
+  scroll-behavior: smooth; */
+  width: 70%;
+  height: 50%;
+
+  overflow-x: scroll;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  scroll-behavior: smooth;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
