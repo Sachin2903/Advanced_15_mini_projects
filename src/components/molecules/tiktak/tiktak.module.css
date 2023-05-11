@@ -1,0 +1,53 @@
+.tiktak {
+  width: 370px;
+  height: 370px;
+  background-color: rgb(126, 137, 255);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-shadow: 9px 9px 1px rgb(101, 100, 100);
+}
+.takboxex {
+  height: 120px;
+  width: 120px;
+  border: 0;
+  display: flex;
+  font-size: 100px;
+  color: rgb(229, 209, 28);
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 6px rgb(41, 41, 41);
+  background-color: rgb(255, 255, 255);
+}
+.takboxzero {
+  height: 120px;
+  width: 120px;
+  border: 0;
+  display: flex;
+  font-size: 100px;
+  color: red;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 8px rgb(41, 41, 41);
+  background-color: rgb(255, 255, 255);
+}
+.btnxo {
+  background-color: chartreuse;
+  width: 100px;
+  height: 40px;
+  font-weight: bold;
+  border: 0;
+  box-shadow: 2px 2px 3px rgb(41, 41, 41);
+  border-radius: 21%;
+  cursor: pointer;
+}
+
+.takboxex:hover {
+  box-shadow: 0px 0px 15px rgb(41, 41, 41);
+}
+.takboxzero:hover {
+  box-shadow: 0px 0px 15px rgb(41, 41, 41);
+}
+.btnxo:hover {
+  box-shadow: 4px 4px 1px rgb(101, 100, 100);
+}
