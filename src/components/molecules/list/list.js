@@ -12,8 +12,10 @@ export function List(props) {
 
 
     function clickunderline() {
+        console.log(textunder.current,props.k)
         textunder.current.style.textDecoration = 'line-through';
         if (props.taketru[textunder.current.id]) {
+            
             props.setcountstate(props.countstate - 1);
             props.taketru[textunder.current.id] = false;
         }
