@@ -9,6 +9,7 @@ export function Quizstructure() {
     const [quepage, setQuepage] = useState(0);
     const [truanswer, setTruAnswer] = useState([...tru]);
     const [ansstyle, setAnsStyle] = useState(-1);
+    const [btnstate, setbtnState] = useState("Next");
     const [min, setMin] = useState(9);
     const [sec, setSec] = useState(60);
 
@@ -36,9 +37,13 @@ export function Quizstructure() {
         setAnsStyle(-1)
         if (!truanswer[quepage] && quepage < Quizdata.length) {
             setQuepage(quepage + 1);
+            if (quepage == 8) {
+                setbtnState("Submit");
+            }
 
 
         } else if (!(quepage < Quizdata.length)) {
+            setbtnState("Next");
             setMin(9);
             setSec(60)
             setMarks(0);
@@ -87,7 +92,7 @@ export function Quizstructure() {
                             Quizdata[quepage].options.map((e, i) => <p onClick={() => scoreFun(i + 1)} className={` ${styles.optionoption} ${(ansstyle === i) ? styles.optionoptionselect : null}`} key={i * 10}>{e}</p>)
                         }
                         </div>
-                        <div className={styles.btndiv}><button onClick={changeQuestion} className={styles.nextbtn}>Next</button></div>
+                        <div className={styles.btndiv}><button onClick={changeQuestion} className={styles.nextbtn}>{btnstate}</button></div>
                     </Fragment>
                 )
 
