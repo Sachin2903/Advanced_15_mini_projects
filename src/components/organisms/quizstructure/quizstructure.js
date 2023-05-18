@@ -80,8 +80,12 @@ export function Quizstructure() {
                             <h1>Your Score : {marks}</h1>
                             <h1>Total Score 20</h1>
                         </div>
-                        <button onClick={changeQuestion} className={styles.restartbtn} >Restart</button>
 
+                        {
+                            (marks<12)?(<button onClick={changeQuestion} className={styles.restartbtn} >Restart</button>):(<h1>Great you pass the test</h1>)
+                            
+                        }
+                        
                     </Fragment>
 
                 ) : (
