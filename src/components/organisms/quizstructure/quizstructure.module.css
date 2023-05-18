@@ -1,0 +1,119 @@
+.quizbox{
+   
+    padding:20px;
+    min-width: 420px;
+    width: 30%;
+    height:500px ;
+    min-height:500px ;
+    background-color:rgb(240, 208, 208);
+   display: flex;
+   align-items: center;
+      justify-content:space-between ;
+   flex-direction: column;
+
+    box-shadow: 0 0 8px black;
+}
+
+.question{
+
+    font-weight: 900;
+    font-family: monospace;
+   word-wrap: break-word;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    height:20%;
+    box-shadow: 0 0 4px black;
+    background-color: white;
+}
+.question:hover{
+    box-shadow: 0 0 6px black;
+}
+.optiondiv{
+  
+    width: 100%;
+    min-height: 60%;
+    padding: 20px;
+}
+.optionoption{
+    cursor: pointer;
+    background-color: white;
+    border:1px solid black;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: cursive;
+    width: 100%;
+    min-height: 21%;
+    text-align: center;
+   
+}
+.optionoptionselect{
+    cursor: pointer;
+    background-color: rgb(44, 200, 252);
+    border:1px solid black;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: cursive;
+    width: 100%;
+    min-height: 21%;
+    text-align: center;
+   
+}
+.optionoption:hover{
+    box-shadow: 0 0 5px black;
+    
+
+
+}
+
+.nextbtn{
+    background-color: aquamarine;
+    width: 80px;
+    height: 50px;
+    border-radius: 10%;
+    border: 0;
+
+    font-size: 1.2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    box-shadow: 0 0 3px black;
+    float: right;
+}
+.restartbtn{
+    width: 80px;
+    height: 50px;
+    border-radius: 10%;
+    border: 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    box-shadow: 0 0 3px black;
+   background-color: rgb(238, 72, 72);
+}
+
+.btndiv{
+    
+    width: 100%;
+}
+.nextbtn:hover{
+    box-shadow: 0 0 7px black;
+}
+.restartbtn:hover{
+    box-shadow: 0 0 7px black;
+
+}
+.timetime{
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    cursor: wait;
+    
+    background-color: rgb(255, 212, 57);
+}
