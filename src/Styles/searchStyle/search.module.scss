@@ -1,0 +1,70 @@
+@mixin flexProp($jus,$ali){
+   display: flex;
+   justify-content: $jus;
+   align-items: $ali;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+
+
+ .box{
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    background-color: rgba(233, 235, 236, 0.981);
+    @include flexProp(end, center)
+}
+.searchbox{
+    background-color: white;
+    height: 40px;
+    width:500px;
+    border: 0;
+    padding-left: 20px;
+    border-radius: 44px;
+    box-shadow: 0 1px 1px black;
+    @include flexProp(none,center )
+}
+.searchbox:hover{
+    transform: scale(1.005);
+   
+}
+.search{
+    font-size: 1em;
+    border: 0;
+    outline: none;
+    padding-left: 14px;
+    height: 100%;
+    width: 90%;
+    
+    
+}
+.searchicon{
+    cursor: pointer;
+    color:rgb(119, 119, 255);
+    
+}
+.searchhint{
+    font-family: 'Open Sans', sans-serif;
+    flex-direction: column;
+
+    @include flexProp(space-between,flex-start );
+  
+    width: 90%;
+    margin: 0 5%;
+    overflow-y: auto;
+    gap:3px;
+    position: relative;
+    padding-left:25px;
+    top:0.4%;
+    box-shadow: 0px 0.5px 0px black;
+    max-height: 250px;
+    background-color: rgb(255, 255, 255);
+
+}
+.boxaline{
+
+    position: relative;
+    height: 55vh;
+}
