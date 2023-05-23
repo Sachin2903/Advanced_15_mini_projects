@@ -51,7 +51,7 @@
   overflow-y: auto;
   gap: 3px;
   position: relative;
-  padding-left: 25px;
+  padding: 0 25px;
   top: 0.4%;
   box-shadow: 0px 0.5px 0px black;
   max-height: 250px;
@@ -61,4 +61,9 @@
 .boxaline {
   position: relative;
   height: 55vh;
+}
+
+.hinttext {
+  cursor: pointer;
+  width: 100%;
 }/*# sourceMappingURL=search.module.css.map */
