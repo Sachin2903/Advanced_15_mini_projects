@@ -14,16 +14,15 @@ export const todolistSlice=createSlice({
 
         },
         changemystatus:(state,action)=>{
-        return state.map((e,i)=>{
+           
+         state.map((e,i)=>{
+            console.log(e.status);
              if(i==action.payload){
-                return {
-                    Name:e.Name,
-                    id:e.id,
-                    status:"complete"
-                }
+               e.status="complete";
              }
             
         })
+        return state;
         }
 
     }
