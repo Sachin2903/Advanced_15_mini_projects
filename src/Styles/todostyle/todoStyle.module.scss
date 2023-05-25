@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@mixin flexprop($a,$b,$c){
+    display: flex;
+    flex-direction: $a;
+    justify-content: $b;
+    align-items: $c;
+
+}
+.maintodo{
+     @include flexprop(row,center,center);
+    width: 100vw;
+    height: 100vh;
+    background-color: aquamarine;
+}
+.todo{
+    border-radius: 4%;
+    border:3px solid blue;
+    width: 22%;
+    min-width: 350px;
+    min-height: 75%;
+ 
+    background-color: yellow;
+    box-shadow: 0 3px 9px black;
+}

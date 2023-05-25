@@ -1,0 +1,13 @@
+.list{
+    font-family:monospace ;
+    margin: 3% 4% 3% 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 30px;
+    border:1px solid black;
+}
+.listtask{
+    max-width: 50%;
+    word-break: break-all;
+}

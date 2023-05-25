@@ -1,0 +1,31 @@
+import { createSlice } from "@reduxjs/toolkit";
+
+export const todolistSlice=createSlice({
+    initialState:[],
+    name:"todo",
+    reducers:{
+        savedetails:(state,action)=>{
+            let i={
+               Name:action.payload,
+               id:state.length,
+               status:"pending"
+            }
+           return [...state,i];
+
+        },
+        changemystatus:(state,action)=>{
+        return state.map((e,i)=>{
+             if(i==action.payload){
+                return {
+                    Name:e.Name,
+                    id:e.id,
+                    status:"complete"
+                }
+             }
+            
+        })
+        }
+
+    }
+
+})
