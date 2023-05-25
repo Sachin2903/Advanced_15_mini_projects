@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import Switch from '@mui/material/Switch';
 import { useDispatch } from "react-redux";
 import { todolistSlice } from "../../slice/todolistslice";
 import style from "../../Styles/list/list.module.css"
@@ -10,9 +11,9 @@ export function List({name,status,id}){
     return (
        <Fragment>
         <div className={style.list}>
-          <input onChange={changeStatus} type="radio"/>
+          <Switch onChange={changeStatus}/>
           <p className={style.listtask}>{name}</p>
-          <p >{status}</p>
+          <p  className={(status==="pending")?style.green:style.red}>{status}</p>
           </div>
 
 

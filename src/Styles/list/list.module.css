@@ -11,4 +11,16 @@
 .listtask {
   max-width: 50%;
   word-break: break-all;
+}
+
+.green {
+  border-radius: 15%;
+  color: white;
+  background-color: green;
+}
+
+.red {
+  border-radius: 15%;
+  background-color: red;
+  color: black;
 }/*# sourceMappingURL=list.module.css.map */

@@ -16,9 +16,13 @@ export const todolistSlice=createSlice({
         changemystatus:(state,action)=>{
            
          state.map((e,i)=>{
-            console.log(e.status);
+           
              if(i==action.payload){
-               e.status="complete";
+                
+                (e.status==="pending")?e.status="complete": e.status="pending"
+            
+            
+
              }
             
         })
