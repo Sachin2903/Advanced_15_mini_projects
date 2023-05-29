@@ -1,7 +1,21 @@
 import { Fragment } from "react";
 import {BsHeartFill} from "react-icons/bs"
+
+
+import { useDispatch } from "react-redux";
+import {movieSlice} from "../../Slice/movieSlice";
+
+
+
+
 import styles from "../../Styles/movie/movie.module.css"
 export function Movie(props){
+  const favDispatch=useDispatch();
+
+  function changeFavMovie(){
+    favDispatch(movieSlice.actions)
+  }
+
    return(
     <Fragment>
         <div className={styles.moviebox}>
@@ -16,7 +30,9 @@ export function Movie(props){
               </ul>
 
             </div>
-          <span className={styles.heart}><BsHeartFill/></span>
+          <span onClick={()=>{
+            changeFavMovie()
+          }} className={styles.heart}><BsHeartFill/></span>
 
         </div>
 

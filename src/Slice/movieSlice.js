@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { async } from "q";
+
 
 
 export const getAllMovies=createAsyncThunk("movies/fetchAllMovies",async()=>{
